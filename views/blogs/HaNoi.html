@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Airlines | Đồng hành cùng bạn</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/booking.css">
+  <link rel="stylesheet" href="/styles/login.css">
+  <link rel="stylesheet" href="/styles/seatManage.css">
+  <link rel="stylesheet" href="/styles/ticketInfo.css">
+  <link rel="stylesheet" href="/styles/PhuQuoc.css">
+  <link rel="icon" type="image/x-icon" href="/images/logoIcon.png" size="32x32">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-xl sticky-top p-2" id="navbar">
+    <nav class="container-lg"><a class="navbar-brand js-scroll-trigger" href="/"><img src="/images/logo.png" style="width:80%"></a>
+      <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-0 mx-lg-2 px-2 dropdown" onmouseenter="hoverLi();" onmouseleave="leaveLi();">
+            <div class="nav-link py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger" id="hover-li" data-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Thông tin đặt vé      </div>
+            <div class="dropdown-menu">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/booking"><i class="mr-2 fas fa-star"></i>Đặt vé</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/viewTicket"> <i class="mr-2 fas fa-ticket-alt"> </i>Lịch sử đặt vé</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/settingQD6"> <i class="mr-2 fas fa-fw fa-plane-departure"></i>Sân bay </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/booking"><i class="mr-2 fas fa-check"></i>Check-in Online</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ha-noi"> <i class="mr-2 fas fa-utensils"></i>Du lịch</a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item mx-0 mx-lg-2 px-2 dropdown" onmouseenter="hoverLi2();" onmouseleave="leaveLi2();">
+            <div class="nav-link py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger" id="hover-li2" data-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Khám phá</div>
+            <div class="dropdown-menu">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/phu-quoc"><i class="mr-2 fas fa-star"></i>Phú Quốc</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/da-nang"> <i class="mr-2 fas fa-ticket-alt"> </i>Đà Nẵng                         </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/quy-nhon"> <i class="mr-2 fas fa-fw fa-plane-departure"></i>Quy Nhơn </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ho-chi-minh"><i class="mr-2 fas fa-check"></i>TP Hồ Chí Mính</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ha-noi"> <i class="mr-2 fas fa-bell"></i>Hà Nội</a></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="ml-auto p-2 bg-dark" id="dn" style="border-radius:15px;outline:none;"><a class="ml-auto py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger text-light" id="login-home" href="/login">Đăng nhập</a></div>
+        <div class="p-2 bg-dark ml-2" id="dk" style="border-radius:15px;outline:none;"><a class="ml-auto py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger text-light" id="signup-home" href="/signup">Đăng ký</a></div>
+      </div>
+    </nav>
+  </nav>
+  <div class="scrollTop position-fixed" onclick="scrollToTop();"></div><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/HeroBannerDestination/Vietnam/Herro%20banner/HANOI/Hero%20banner/1300x450/Hanoi_herobanner_chua_tran_quoc_1300x450.jpg" style="padding-bottom:20px; width:100%">
+  <div class="abc container"><a class="linkurl" href="/">Trang chủ &nbsp</a><i class="fas fa-chevron-right"></i><a class="linkurl" href="#2">&nbsp Khám phá &nbsp</a><i class="fas fa-chevron-right"></i><span>&nbsp Hà Nội</span>
+    <div class="flex-container">
+      <div class="flex-item1"><span class="fas fa-mountain" style="font-size:20px"></span><a class="linkurl" href="#c1">&nbsp Cảnh đẹp</a></div>
+      <div class="flex-item1"><span class="fas fa-hamburger" style="font-size:20px"></span><a class="linkurl" href="#c2">&nbsp Ẩm thực</a></div>
+      <div class="flex-item1"><span class="fas fa-running" style="font-size:20px"></span><a class="linkurl" href="#c3">&nbsp Hoạt động</a></div>
+      <div class="flex-item1"><span class="fas fa-car" style="font-size:20px"></span><a class="linkurl" href="#c4">&nbsp Di chuyển</a></div>
+      <div class="flex-item1"><span class="far fa-file-alt" style="font-size:20px"></span><a class="linkurl" href="#c5">&nbsp Thông tin hữu ích</a></div>
+    </div>
+    <h2 style="text-align:center">Hà Nội – Thủ đô nghìn năm văn hiến</h2>
+    <p>
+      Hà Nội nằm ở nơi con sông Hồng đỏ nặng phù sa chảy vào đồng bằng Bắc Bộ, là trung tâm chính trị, kinh tế, văn hoá của Việt Nam.
+      Từ bao đời nay, mảnh đất kinh kỳ luôn mang trong mình vẻ đẹp thơ mộng bên cạnh nét sôi động của chốn thị thành, lưu giữ hàng nghìn công trình kiến trúc đặc sắc gắn liền với lịch sử dân tộc.
+      Vẻ đẹp văn hóa Hà Nội hiển hiện qua cốt cách thanh lịch đáng quý của chính con người nơi đây.
+      <p id="c1" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;"> Cảnh đẹp</p>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/canh%20dep/1920x1080/Hanoi_canhdep_van_mieu_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Văn Miếu Quốc Tử Giám</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/canh%20dep/1920x1080/Hanoi_canhdep_dam_sen_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Đầm Sen</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/canh%20dep/1920x1080/Hanoi_canhdep_hoang_thanh_thang_long_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Hoàng Thành Thăng Long</figcaption>
+      </div>
+      <p><strong>Văn Miếu Quốc Tử Giám</strong>: Văn Miếu Quốc Tử Giám là trường đại học đầu tiên của Việt Nam - biểu tượng của tinh thần hiếu học. Tại đây lưu trữ hàng trăm tấm bia đá ghi danh các danh nhân khoa bảng của đất nước cách đây hàng thế kỷ.
+        Đã thành tục lệ, hằng năm trước các kỳ thi trọng đại, các em học sinh sẽ đến đây để cầu cho thi cử đỗ đạt.
+        <br>
+        <strong>Hoàng Thành Thăng Long</strong>:  Giữa thủ đô hoa lệ, một quần thể kiến trúc cổ kính hiện lên với vẻ trang nghiêm, trầm mặc, đó là Hoàng thành Thăng Long.
+        Nơi đây là kinh đô của nhiều triều đại trong lịch sử phong kiến Việt Nam, có hệ thống cung điện, thành quách nguy nga, đồ sộ: Đoan Môn, Bắc Môn, điện Kính Thiên, cột cờ Hà Nội…
+        <br>
+        <strong>Phố cổ</strong>:  Hà Nội 36 phố phường, đó là những phố cổ quanh hồ Hoàn Kiếm, thường có tên bắt đầu bằng chữ “Hàng” như: Hàng Mã, Hàng Bạc, Hàng Đào.
+        Các con phố xưa kia được quy hoạch bởi người Pháp, nay đã trở thành nơi diễn ra nhiều hoạt động vui chơi, văn hóa, thể thao. Đến đây, bạn sẽ tìm thấy nhiều khách sạn, homestay, bar, pub, lounge, cà phê, hàng ăn cùng các cửa hàng lưu niệm.
+        <br>
+        <strong>Vườn quốc gia Ba Vì</strong>:  Di chuyển về ngoại thành, sẽ là một trải nghiệm tuyệt vời nếu bạn thăm thú vườn quốc gia Ba Vì.
+        Đây là nơi nghỉ dưỡng lý tưởng với không khí trong lành, mát mẻ và thiên nhiên tươi đẹp. Vào tháng 11, sắc hoa dã quỳ nở vàng rực phủ kín triền đồi, vẽ nên khung cảnh đẹp đến nao lòng.
+        <br><strong>Chùa Hương</strong>: Chùa Hương là một trong những quần thể đền, chùa đồ sộ, linh thiêng bậc nhất tại Việt Nam.
+        Tại đây, bạn sẽ được hòa mình vào không gian thanh tịnh nơi cửa Phật, tham gia nhiều hoạt động văn hóa như bơi thuyền, leo núi, hát văn...
+      </p>
+      <p id="c2" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Ẩm thực</p>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/Am%20thuc/1920x1080/Hanoi_amthuc_com_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Cốm làng Vòng</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/Am%20thuc/1920x1080/Hanoi_amthuc_bun_cha_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Bún chả</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/Am%20thuc/1920x1080/Hanoi_amthuc_pho_bo_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Phở Bò </figcaption>
+      </div>
+      <p>
+        Ẩm thực Hà Nội mang nét rất riêng bởi người Hà Nội xưa nay vốn cầu kỳ trong ăn uống, mùa nào thức nấy, tỉ mỉ trong phối hợp các món ăn và cách thưởng thức sao cho tròn vị.
+        Có nhiều món ngon ở Hà Nội mà bạn nhất định phải thử như: phở, bún thang, cốm làng Vòng, chả cá Lã Vọng, bánh tôm Tây Hồ...
+        <br>
+        Phở Hà Nội nổi tiếng là phở bò. Nước dùng nóng hổi, đậm đà vị ngọt với hương quế, hồi đặc trưng, sóng sánh giữa những sợi bánh trắng ngần, bùi dai và thịt bò mềm, ngọt. Khi thưởng thức, bạn rắc thêm ít hành lá, tương ớt, giấm hay chanh để nước dùng thanh, dậy vị hơn.
+        <br>
+        Nếu phở là món ăn ấm nóng thì cốm là thức quà ngọt ngào của mùa thu, được làm từ hạt gạo non còn vương hương sữa. Hạt cốm xanh, mềm, bùi, thơm, khi ăn có độ dẻo, dai, vị ngọt thanh khiến thực khách khó lòng cưỡng lại.
+      </p>
+      <p id="c3" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Các hoạt động</p>
+      <p>
+        Hà Nội có phố đi bộ Hồ Gươm mở từ tối thứ Sáu tới hết Chủ nhật. Đây là không gian văn hóa đường phố độc đáo, nơi bạn có thể tham gia các trò chơi dân gian thú vị như: nhảy dây, kéo co, đá cầu…, chiêm ngưỡng quá trình nặn tò he hay thưởng thức âm nhạc đường phố và truyền thống như: tuồng, chèo, múa rối nước…
+        <br>Vào những ngày cuối tuần, bạn có thể dạo chợ đêm từ phố Hàng Đào đến chợ Đồng Xuân, ghé qua Tạ Hiện - khu phố ăn chơi nổi tiếng của giới trẻ - để nhâm nhi một vài cốc bia và tán dóc cùng bè bạn.
+        <br>Bạn hãy dành một ngày để đạp xe du ngoạn quanh hồ Tây rồi dừng chân ngắm nhìn khung cảnh hoàng hôn thơ mộng. Ghé một quán cà phê ven hồ hay chơi đạp vịt là lựa chọn thú vị cho các buổi hẹn hò.
+        <br>Nếu ưa thích các trò chơi vui nhộn, mạo hiểm, công viên Hồ Tây là nơi bạn có thể trải nghiệm những đường trượt nước xoắn ốc, vòng đu quay khổng lồ...             
+      </p>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/Hoat%20dong/1920x1080/Hanoi_hoatdong_xich_lo_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Ngồi xích lô</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/Hoat%20dong/1920x1080/Hanoi_hoatdong_cafe_duong_tau_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Cafe trên đường tàu</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/HANOI/Hoat%20dong/1920x1080/Hanoi_hoatdong_gom_bat_trang_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Làm gốm Bát Tràng</figcaption>
+      </div>
+      <p id="c4" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Di chuyển</p>
+      <p class="ab container">Khi thực hiện chuyến bay đến Hà Nội, hành khách hạ cánh tại sân bay Nội Bài cách trung tâm thành phố khoảng 30km, mất 30 - 40 phút di chuyển. Xe buýt mini của Vietnam Airlines đợi khách tại nhà ga T1, giá vé 40.000 đồng/lượt, tần suất 30 - 45 phút/chuyến. Xe buýt thường có các tuyến 07 (Cầu Giấy - Nội Bài), 17 (Long Biên - Nội Bài), 90 (Kim Mã - Cầu Nhật Tân - Nội Bài), 86 (Ga Hà Nội - Bờ Hồ - Nội Bài) đón khách tại nhà ga T1, T2, giá vé 9.000 đồng/lượt, riêng xe 86 giá vé 30.000 đồng/lượt. Bạn cũng có thể bắt taxi ở khu vực nhà ga T1 và T2 với chi phí từ 250.000 đồng/lượt.</p>
+      <div class="container1" style="display:flex; justify-content:center">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Ko2ISrka0SQ" style="width: 800px; height: 450px; display:flex; justify-content:center; align-self:center"></iframe>
+      </div>
+      <p id="c5" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Thông tin hữu ích</p>
+      <div class="abc container">
+        <p style="font-size:22px"> Nơi ở</p>
+        <p style="margin-left:10px;margin-right:10px;text-align:justify">
+          Tùy thuộc vào nhu cầu nghỉ dưỡng hay du lịch tham quan, địa điểm mà bạn muốn tới…mà sẽ có được lựa chọn cho mình những khách sạn phù hợp nhất. Hiện nay, có 3 khu vực khách sạn được du khách lựa chọn nhiều nhất khi du lịch Hà Nội đó là: Khu vực quận Hoàn Kiếm, quận Ba Đình và quận Tây Hồ.
+           <br>Khu vực Hoàn Kiếm: Khách sạn ở khu vực này rất thuận tiện đi lại, gần điểm du lịch và yên tĩnh, cách hồ Hoàn Kiếm khoảng 5 phút đi bộ, rất gần các điểm tham quan nổi tiếng quanh khu vực như   Lăng Hồ Chí Minh (Ba Đình), chùa Một Cột, Văn Miếu… Đặc biệt là khu vực này được mệnh danh là trung tâm phố cổ, có rất nhiều nơi để vui chơi, giải trí và thư giãn.
+          <br>Khu vực Ba Đình: Những khách sạn ở khu vực này rất thích hợp với du lịch nghỉ dưỡng và yên tĩnh, tuy nhiên các hoạt động vui chơi giải trí về đêm ở khu vực này không được nhộn nhịp như khu vực phố Cổ.
+          <br>Khu vực Tây Hồ: Khu vực quận Tây Hồ là nơi tập trung rất nhiều khách sạn đẹp, cao cấp, khu vực này có không khí trong lành rất thích hợp với nghỉ dưỡng. Ở Tây hồ có Hồ Tây, đây là một hồ lớn nhất trung tâm Hà Nội, nơi tập trung nhiều địa điểm du lịch nổi tiếng của thủ đô như chùa Trấn Quốc, Phủ Tây Hồ, …
+        </p>
+        <p style="font-size:22px"> Cẩm nang bỏ túi</p>
+        <ul>
+          <li>Mang theo bản đồ khi dạo quanh phố Cổ vì khu vực này đường rất ngắn nhưng lại lòng vòng nếu không tinh ý bạn rất dễ bị lạc ở đây.</li>
+          <li>Chú ý chiều đón xe bus vì đa số đường xa ở Hà Nội là đường hai chiều mà lộ trình xe bus chiều đi và về nhiều tuyến rất khác nhau.</li>
+          <li>
+             Khi đi các khu chợ ở Hà Nội mua sắm như chợ Đồng Xuân, chợ đêm Hàng Đào nhớ trả và thỏa thuận trước với người bán hàng.</li>
+          <li>Khi du lịch Hà Nội vào mùa đông nhớ mang áo ấm vì thời tiết lúc này rất lạnh.</li>
+        </ul>
+      </div>
+    </p>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+    showSlides((slideIndex += n));
+    }
+    
+    function currentSlide(n) {
+    showSlides((slideIndex = n));
+    }
+    
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+    
+    //- function openModal2() {
+    //- document.getElementById("myModal2").style.display = "block";
+    //- }
+    
+    //- function closeModal2() {
+    //- document.getElementById("myModal2").style.display = "none";
+    //- }
+    
+    //- var slideIndex2 = 1;
+    //- showSlides2(slideIndex2);
+    
+    //- function plusSlides2(n) {
+    //- showSlides2((slideIndex2 += n));
+    //- }
+    
+    //- function currentSlide2(n) {
+    //- showSlides2((slideIndex2 = n));
+    //- }
+    
+    //- function showSlides2(n) {
+    //- var i;
+    //- var slides = document.getElementsByClassName("mySlides2");
+    //- var dots = document.getElementsByClassName("demo");
+    //- var captionText = document.getElementById("caption2");
+    //- if (n > slides.length) {
+    //-     slideIndex2 = 1;
+    //- }
+    //- if (n < 1) {
+    //-     slideIndex2 = slides.length;
+    //- }
+    //- for (i = 0; i < slides.length; i++) {
+    //-     slides[i].style.display = "none";
+    //- }
+    //- for (i = 0; i < dots.length; i++) {
+    //-     dots[i].className = dots[i].className.replace(" active", "");
+    //- }
+    //- slides[slideIndex2 - 1].style.display = "block";
+    //- dots[slideIndex2 - 1].className += " active";
+    //- captionText.innerHTML = dots[slideIndex2 - 1].alt;
+    //- }
+  </script>
+  <footer class="footer-bottom text-center footer-class">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-sm-4 mb-4 mb-sm-0">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">vị trí</h4>
+          <p class="lead mb-0" style="color:white; text-align: center">
+            
+            Trường Đại học Công nghệ Thông tin TPHCM
+            <br>
+            Khu phố 6, Phường Linh Trung, TP. Thủ Đức
+            
+          </p>
+        </div>
+        <div class="col-sm-4 mb-4 mb-sm-0">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">Sky Airlines</h4><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-dribbble"></i></a>
+        </div>
+        <div class="col-sm-4">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">Về chúng tôi</h4>
+          <p class="lead mb-0" style="color:white; text-align: center">Quản lý bán vé chuyến bay<br>SE104.N23</p><b class="text-uppercase" style="color:white; text-align: center">team 26</b>
+        </div>
+      </div>
+      <div class="copyright py-4 text-center text-white container-xl"><small style="color:white;">Copyright © Team 26</small></div>
+    </div>
+  </footer>
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+    }
+    });
+    
+    function hoverLi(){
+    document.getElementById("hover-li").style.color= "#f4942d";
+    };
+    function leaveLi(){
+    document.getElementById("hover-li").style.color= "#1f3c7a";
+    };
+    
+    function hoverLi2(){
+    document.getElementById("hover-li2").style.color= "#f4942d";
+    };
+    function leaveLi2(){
+    document.getElementById("hover-li2").style.color= "#1f3c7a";
+    };
+    
+    function hoverLi3(){
+    document.getElementById("hover-li3").style.color= "#f4942d";
+    };
+    function leaveLi3(){
+    document.getElementById("hover-li3").style.color= "#1f3c7a";
+    };
+    
+    window.addEventListener('scroll',()=>{
+        var scroll = document.querySelector('.scrollTop');
+        scroll.classList.toggle('actived',window.scrollY > 400)
+    });
+    
+    function scrollToTop(){
+        //- window.scrollTo({
+        //-     top:0,
+        //-     behavior: 'smooth'
+        //- });
+        $("html, body").animate({scrollTop: 0 },"show");
+    };
+  </script>
+</body>

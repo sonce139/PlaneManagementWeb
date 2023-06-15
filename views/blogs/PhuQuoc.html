@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Airlines | Đồng hành cùng bạn</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/booking.css">
+  <link rel="stylesheet" href="/styles/login.css">
+  <link rel="stylesheet" href="/styles/seatManage.css">
+  <link rel="stylesheet" href="/styles/ticketInfo.css">
+  <link rel="stylesheet" href="/styles/PhuQuoc.css">
+  <link rel="icon" type="image/x-icon" href="/images/logoIcon.png" size="32x32">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-xl sticky-top p-2" id="navbar">
+    <nav class="container-lg"><a class="navbar-brand js-scroll-trigger" href="/"><img src="/images/logo.png" style="width:80%"></a>
+      <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-0 mx-lg-2 px-2 dropdown" onmouseenter="hoverLi();" onmouseleave="leaveLi();">
+            <div class="nav-link py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger" id="hover-li" data-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Thông tin đặt vé      </div>
+            <div class="dropdown-menu">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/booking"><i class="mr-2 fas fa-star"></i>Đặt vé</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/viewTicket"> <i class="mr-2 fas fa-ticket-alt"> </i>Lịch sử đặt vé</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/settingQD6"> <i class="mr-2 fas fa-fw fa-plane-departure"></i>Sân bay </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/booking"><i class="mr-2 fas fa-check"></i>Check-in Online</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ha-noi"> <i class="mr-2 fas fa-utensils"></i>Du lịch</a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item mx-0 mx-lg-2 px-2 dropdown" onmouseenter="hoverLi2();" onmouseleave="leaveLi2();">
+            <div class="nav-link py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger" id="hover-li2" data-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Khám phá</div>
+            <div class="dropdown-menu">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/phu-quoc"><i class="mr-2 fas fa-star"></i>Phú Quốc</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/da-nang"> <i class="mr-2 fas fa-ticket-alt"> </i>Đà Nẵng                         </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/quy-nhon"> <i class="mr-2 fas fa-fw fa-plane-departure"></i>Quy Nhơn </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ho-chi-minh"><i class="mr-2 fas fa-check"></i>TP Hồ Chí Mính</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ha-noi"> <i class="mr-2 fas fa-bell"></i>Hà Nội</a></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="ml-auto p-2 bg-dark" id="dn" style="border-radius:15px;outline:none;"><a class="ml-auto py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger text-light" id="login-home" href="/login">Đăng nhập</a></div>
+        <div class="p-2 bg-dark ml-2" id="dk" style="border-radius:15px;outline:none;"><a class="ml-auto py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger text-light" id="signup-home" href="/signup">Đăng ký</a></div>
+      </div>
+    </nav>
+  </nav>
+  <div class="scrollTop position-fixed" onclick="scrollToTop();"></div><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/HeroBannerDestination/Vietnam/Herro%20banner/PHUQUOC/Hero%20banner/1300x450/Phuquoc_bai_bien_phuquoc_1300x450.jpg" style="padding-bottom:20px; width:100%">
+  <div class="abc container"><a class="linkurl" href="/">Trang chủ &nbsp</a><i class="fas fa-chevron-right"></i><a class="linkurl" href="#2">&nbsp Khám phá &nbsp</a><i class="fas fa-chevron-right"></i><span>&nbsp Phú Quốc</span>
+    <div class="flex-container">
+      <div class="flex-item1"><span class="fas fa-mountain" style="font-size:20px"></span><a class="linkurl" href="#c1">&nbsp Cảnh đẹp</a></div>
+      <div class="flex-item1"><span class="fas fa-hamburger" style="font-size:20px"></span><a class="linkurl" href="#c2">&nbsp Ẩm thực</a></div>
+      <div class="flex-item1"><span class="fas fa-running" style="font-size:20px"></span><a class="linkurl" href="#c3">&nbsp Hoạt động</a></div>
+      <div class="flex-item1"><span class="fas fa-car" style="font-size:20px"></span><a class="linkurl" href="#c4">&nbsp Di chuyển</a></div>
+      <div class="flex-item1"><span class="far fa-file-alt" style="font-size:20px"></span><a class="linkurl" href="#c5">&nbsp Thông tin hữu ích</a></div>
+    </div>
+    <h2 style="text-align:center">Phú Quốc - Hòn Ngọc Quý</h2>
+    <p>
+      Nằm ở phía Tây Nam Việt Nam, trong vùng vịnh Thái Lan, đảo Phú Quốc được mệnh danh là hòn ngọc quý của Việt Nam.
+      Vẻ đẹp thơ mộng, yên bình hiện hữu trong làn nước biển trong veo màu ngọc bích, những bãi cát trải dài trắng xóa in bóng rặng dừa xanh cùng các rạn san hô rực rỡ sắc màu và khu rừng nguyên sinh xanh thẳm.
+      Giữa khung cảnh thiên nhiên, hình ảnh con người hiện lên bình dị, chân chất ở nơi làng chài, bên những vườn hồ tiêu xanh bạt ngàn.
+      <p id="c1" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;"> Cảnh đẹp</p>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/canh%20dep/1920x1080/Phuquoc_canhdep_cau_go_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Cầu gỗ trên biển</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/canh%20dep/1920x1080/Phuquoc_canhdep_bai_bien_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Biển Phú Quốc</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/canh%20dep/1920x1080/Phuquoc_canhdep_vuon_ho_tieu_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Vườn hồ tiêu</figcaption>
+      </div>
+      <p><strong>Bãi Trường</strong>: Ẩm thực Phú Quốc nổi tiếng với các món ăn từ hải sản tươi ngon, bổ dưỡng như tôm hùm hấp, ghẹ hấp sả, cháo hải sâm, cầu gai nướng, bào ngư nướng, cá sòng, canh nấm tràm hải sản, cá mú nướng mọi, gỏi cá trích…
+        <br>
+        <strong>Vườn Quốc gia Phú Quốc</strong>:  Nằm ở phía Đông Bắc đảo là vườn quốc gia Phú Quốc. Giữa khu rừng nguyên sinh xanh thẳm, thấp thoáng dòng suối trong veo, thác nước trắng xóa cùng nhiều loài động vật quý hiếm. Tại đây có ba dãy núi lớn là Hàm Ninh, Hàm Rồng và Gành Dầu với đường bờ biển uốn lượn tuyệt đẹp.
+        <br>
+        <strong>Làng chài Hàm Ninh</strong>:  Dưới chân núi Hàm Ninh có một làng chài nằm tĩnh lặng dưới ánh chiều tà đỏ rực. Từ những mái nhà nhấp nhô ven bờ, những nhà bè lênh đênh giữa biển khơi, người dân chài bước lên ghe, thuyền, bắt đầu hành trình chạy đua trên sóng cả, thu vớt các sản vật của vùng biển.
+        <br>
+        <strong>Nhà tù Phú Quốc</strong>: Phú Quốc không chỉ có thiên nhiên tươi đẹp mà còn ẩn dấu những giá trị lịch sử, văn hóa sâu đậm. Nhà tù Phú Quốc là nơi giam giữ chiến sĩ cách mạng Việt Nam trong thời kỳ kháng chiến chống Mỹ, được ví như địa ngục trần gian với nhiều hình thức tra tấn man rợ. Hiện nay, những đòn tra tấn ấy được tái hiện lại qua các mô hình tượng sáp, khiến du khách thổn thức khôn nguôi.
+        <p id="c2" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Ẩm thực</p>
+        <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/Am%20thuc/1920x1080/Phuquoc_amthuc_cau_gai_1920x1080.jpg" style="width:70%;border-radius:10px">
+          <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Cầu gai</figcaption>
+        </div>
+        <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/Am%20thuc/1920x1080/Phuquoc_amthuc_hai_san_1920x1080.jpg" style="width:70%;border-radius:10px">
+          <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Hải sản</figcaption>
+        </div>
+        <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/Am%20thuc/1920x1080/Phuquoc_amthuc_oc_mat_ngoc_1920x1080.jpg" style="width:70%;border-radius:10px">
+          <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Ốc mắt ngọc</figcaption>
+        </div>
+        <p>
+          Ẩm thực Phú Quốc nổi tiếng với các món ăn từ hải sản tươi ngon, bổ dưỡng như tôm hùm hấp, ghẹ hấp sả, cháo hải sâm, cầu gai nướng, bào ngư nướng, cá sòng, canh nấm tràm hải sản, cá mú nướng mọi, gỏi cá trích…
+          <br>
+          Phú Quốc có một đặc sản ngon từ biển, đó là nước mắm, được làm từ những con cá cơm thơm ngon nhất. Mắm Phú Quốc có màu nâu đỏ sậm, mùi thơm nhẹ đặc trưng và hương vị mặn, ngọt đậm cùng vị ngậy tự nhiên từ cá cơm. Mắm dùng làm gia vị, đem đến sự thơm ngon, đậm đà rất riêng.
+          <br>
+          Dạo quanh Phú Quốc, bạn còn được thưởng thức nhiều món ngon như: bún kèn, gà rẫy tiềm ớt xanh, bánh bò thốt nốt, bánh khéo, bánh canh chả cá, rượu sim…
+          Bún kèn là món ăn phổ biến trong các gia đình Phú Quốc, được nấu từ cá nhàu hay cá ngân, dầm nhuyễn rồi chiên tỏi thơm phức.
+          Vị ngọt thanh của cá, thơm ngậy của nước cốt dừa điểm xuyết chút hăng cay của ớt, tất cả tạo nên bữa tiệc vị giác tuyệt vời cho mọi thực khách.
+        </p>
+        <p id="c3" style="text-align:center;padding-top:30px">Các hoạt động</p>
+        <p>
+          Du lịch Phú Quốc, bên cạnh hoạt động ngắm biển, bạn sẽ được thử sức với các hoạt động thú vị như chèo thuyền kayak, lướt mô-tô nước, lướt ván và đặc biệt là lặn ngắm san hô tại quần đảo An Thới.
+          <br>Vinwondes Phú Quốc là địa điểm vui chơi lý tưởng cho các nhóm bạn, gia đình với nhiều hoạt động vui chơi được chia ra theo chủ đề như: khu cảm giác mạnh, công viên nước, lâu đài trung tâm, khu cổ tích, khu Viking.
+          <br>Nếu bạn yêu động vật, đừng bỏ qua Vinpearl Safari Phú Quốc - công viên sở thú hoang dã bảo tồn hơn 3.000 cá thể động vật thuộc nhiều sinh cảnh trên thế giới.
+          Bạn có thể chiêm ngưỡng cá loài thú từ nhiều châu lục như hổ Bengal, linh dương Ả Rập, linh dương sừng xoắn, vượn cáo trắng đen…
+          <br>Hãy đến với trại chó Phú Quốc để ngắm nhìn giống chó xoáy quý hiếm của Việt Nam.
+          Bạn sẽ được chiêm ngưỡng cảnh chó nhặt rác, xếp chữ và đặc biệt là đua chó địa hình. Trường đua của những chú chó được thiết kế với nhiều thử thách như băng rừng, lội suối, vượt rào…
+          <br>Đến Phú Quốc vào những ngày cuối tháng 12, đầu tháng 1, bạn còn có cơ hội tham gia Epizode Festival - lễ hội âm nhạc biển lớn nhất Đông Nam Á.
+        </p>
+        <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/hot%20ng/1920x1080/Phuquoc_hoatdong_cho_dem_1920x1080.jpg" style="width:70%;border-radius:10px">
+          <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Chợ đêm</figcaption>
+        </div>
+        <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/hot%20ng/1920x1080/Phuquoc_hoatdong_lan_ngam_san_ho_1920x1080.jpg" style="width:70%;border-radius:10px">
+          <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Lặn biển</figcaption>
+        </div>
+        <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/PHUQUOC/hot%20ng/1920x1080/Phuquoc_hoatdong_thuyen_thung_1920x1080.jpg" style="width:70%;border-radius:10px">
+          <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Thuyền thúng</figcaption>
+        </div>
+        <p id="c4" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Di chuyển</p>
+        <p class="ab container">Hành khách thực hiện chuyến bay đến Phú Quốc sẽ hạ cánh tại sân bay Phú Quốc, cách trung tâm (thị trấn Dương Đông) khoảng 14km, mất 30 phút di chuyển. Xe bus đón khách ở bãi xe sân bay với giá vé 20.000 đồng/lượt, hoạt động từ 6 giờ đến 18 giờ, tần suất 20 phút/chuyến. Bạn có thể bắt xe ôm ở bãi giữ xe ngoài trời bên phải cổng sân bay với giá từ 60.000 - 70.000 đồng/lượt, hoặc đi taxi với chi phí từ 180.000 - 200.000 đồng/lượt. Hiện nay cách đơn vị du lịch có cung cấp dịch vụ thuê xe đưa đón sân bay, chi phí từ 200.000 lượt tùy vào loại xe.</p>
+        <div class="container1" style="display:flex; justify-content:center"></div>
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/5PsCX2h6VJ4" style="width: 800px; height: 450px; display:flex; justify-content:center; align-self:center"></iframe>
+        <p id="c5" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Thông tin hữu ích</p>
+        <div class="abc container">
+          <p style="font-size:22px"> Nơi ở</p>
+          <p style="margin-left:10px;margin-right:10px;text-align:justify">
+            Có vô số lựa chọn Resort và khách sạn với mọi loại hình du lịch, từ khu cắm trại bên bãi biển, nhà nghỉ sang trọng cho đến các khu nghỉ mát đẳng cấp 5 sao, homestay…cho du khách lựa chọn trong những ngày nghỉ dưỡng ở Phú Quốc. 
+            Những khách sạn thuộc khu vực Bãi Dài là lựa chọn tuyệt vời cho các du khách, vì nó gần thị trấn Dương Đông vừa có nhiều lựa chọn ăn uống vừa nằm ở trung tâm nên sẽ thuận tiện trong việc khám phá hòn đảo. Phía nam của Bãi Dài là những khu nghỉ mát và biệt thự sang trọng. Hoặc nếu bạn di chuyển xa hơn về phía bắc của thị trấn Dương Đông, bạn sẽ khám phá làng Bãi Dài, nơi tập trung rất nhiều Tây ba lô làm nên vẻ đặc trưng của hòn đảo.
+          </p>
+          <p style="font-size:22px"> Cẩm nang bỏ túi</p>
+          <ul>
+            <li>Kem chống nắng là vật dụng không thể thiếu trong chuyến du lịch Phú Quốc, bạn có thể thỏa thê vi vu cả ngày mà làn da vẫn được bảo vệ khỏi những tia cực tím .</li>
+            <li>Đến với Phú Quốc thì thích thú nhất chính là được đắm mình trong dòng nước biển mát lạnh. Hãy nhớ mang theo đồ tắm, khăn tắm, vật dụng cá nhân liên quan để tiết kiệm chi  phí thuê đồ.</li>
+            <li>
+               Ở Phú Quốc nhiều muỗi nên hãy nhớ mang theo cả kem chống côn trùng nữa nhé.</li>
+            <li>Đến với Phú Quốc, vùng đất của biển xanh cát trắng thì phụ kiện nên mang chính là những đôi dép xỏ ngón, tốt nhất là dép cói để dễ dàng lướt trên cát và thật sành điệu bạn nhé.</li>
+          </ul>
+        </div>
+      </p>
+    </p>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+    showSlides((slideIndex += n));
+    }
+    
+    function currentSlide(n) {
+    showSlides((slideIndex = n));
+    }
+    
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+    
+    //- function openModal2() {
+    //- document.getElementById("myModal2").style.display = "block";
+    //- }
+    
+    //- function closeModal2() {
+    //- document.getElementById("myModal2").style.display = "none";
+    //- }
+    
+    //- var slideIndex2 = 1;
+    //- showSlides2(slideIndex2);
+    
+    //- function plusSlides2(n) {
+    //- showSlides2((slideIndex2 += n));
+    //- }
+    
+    //- function currentSlide2(n) {
+    //- showSlides2((slideIndex2 = n));
+    //- }
+    
+    //- function showSlides2(n) {
+    //- var i;
+    //- var slides = document.getElementsByClassName("mySlides2");
+    //- var dots = document.getElementsByClassName("demo");
+    //- var captionText = document.getElementById("caption2");
+    //- if (n > slides.length) {
+    //-     slideIndex2 = 1;
+    //- }
+    //- if (n < 1) {
+    //-     slideIndex2 = slides.length;
+    //- }
+    //- for (i = 0; i < slides.length; i++) {
+    //-     slides[i].style.display = "none";
+    //- }
+    //- for (i = 0; i < dots.length; i++) {
+    //-     dots[i].className = dots[i].className.replace(" active", "");
+    //- }
+    //- slides[slideIndex2 - 1].style.display = "block";
+    //- dots[slideIndex2 - 1].className += " active";
+    //- captionText.innerHTML = dots[slideIndex2 - 1].alt;
+    //- }
+  </script>
+  <footer class="footer-bottom text-center footer-class">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-sm-4 mb-4 mb-sm-0">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">vị trí</h4>
+          <p class="lead mb-0" style="color:white; text-align: center">
+            
+            Trường Đại học Công nghệ Thông tin TPHCM
+            <br>
+            Khu phố 6, Phường Linh Trung, TP. Thủ Đức
+            
+          </p>
+        </div>
+        <div class="col-sm-4 mb-4 mb-sm-0">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">Sky Airlines</h4><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-dribbble"></i></a>
+        </div>
+        <div class="col-sm-4">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">Về chúng tôi</h4>
+          <p class="lead mb-0" style="color:white; text-align: center">Quản lý bán vé chuyến bay<br>SE104.N23</p><b class="text-uppercase" style="color:white; text-align: center">team 26</b>
+        </div>
+      </div>
+      <div class="copyright py-4 text-center text-white container-xl"><small style="color:white;">Copyright © Team 26</small></div>
+    </div>
+  </footer>
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+    }
+    });
+    
+    function hoverLi(){
+    document.getElementById("hover-li").style.color= "#f4942d";
+    };
+    function leaveLi(){
+    document.getElementById("hover-li").style.color= "#1f3c7a";
+    };
+    
+    function hoverLi2(){
+    document.getElementById("hover-li2").style.color= "#f4942d";
+    };
+    function leaveLi2(){
+    document.getElementById("hover-li2").style.color= "#1f3c7a";
+    };
+    
+    function hoverLi3(){
+    document.getElementById("hover-li3").style.color= "#f4942d";
+    };
+    function leaveLi3(){
+    document.getElementById("hover-li3").style.color= "#1f3c7a";
+    };
+    
+    window.addEventListener('scroll',()=>{
+        var scroll = document.querySelector('.scrollTop');
+        scroll.classList.toggle('actived',window.scrollY > 400)
+    });
+    
+    function scrollToTop(){
+        //- window.scrollTo({
+        //-     top:0,
+        //-     behavior: 'smooth'
+        //- });
+        $("html, body").animate({scrollTop: 0 },"show");
+    };
+  </script>
+</body>

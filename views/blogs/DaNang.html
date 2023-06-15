@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Airlines | Đồng hành cùng bạn</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/booking.css">
+  <link rel="stylesheet" href="/styles/login.css">
+  <link rel="stylesheet" href="/styles/seatManage.css">
+  <link rel="stylesheet" href="/styles/ticketInfo.css">
+  <link rel="stylesheet" href="/styles/PhuQuoc.css">
+  <link rel="icon" type="image/x-icon" href="/images/logoIcon.png" size="32x32">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-xl sticky-top p-2" id="navbar">
+    <nav class="container-lg"><a class="navbar-brand js-scroll-trigger" href="/"><img src="/images/logo.png" style="width:80%"></a>
+      <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-0 mx-lg-2 px-2 dropdown" onmouseenter="hoverLi();" onmouseleave="leaveLi();">
+            <div class="nav-link py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger" id="hover-li" data-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Thông tin đặt vé      </div>
+            <div class="dropdown-menu">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/booking"><i class="mr-2 fas fa-star"></i>Đặt vé</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/viewTicket"> <i class="mr-2 fas fa-ticket-alt"> </i>Lịch sử đặt vé</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/settingQD6"> <i class="mr-2 fas fa-fw fa-plane-departure"></i>Sân bay </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/booking"><i class="mr-2 fas fa-check"></i>Check-in Online</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ha-noi"> <i class="mr-2 fas fa-utensils"></i>Du lịch</a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item mx-0 mx-lg-2 px-2 dropdown" onmouseenter="hoverLi2();" onmouseleave="leaveLi2();">
+            <div class="nav-link py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger" id="hover-li2" data-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Khám phá</div>
+            <div class="dropdown-menu">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/phu-quoc"><i class="mr-2 fas fa-star"></i>Phú Quốc</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/da-nang"> <i class="mr-2 fas fa-ticket-alt"> </i>Đà Nẵng                         </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/quy-nhon"> <i class="mr-2 fas fa-fw fa-plane-departure"></i>Quy Nhơn </a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ho-chi-minh"><i class="mr-2 fas fa-check"></i>TP Hồ Chí Mính</a></div>
+                <div class="col-md-6 col-sm-6 mb-3"><a class="dropdown-item" href="/blogs/ha-noi"> <i class="mr-2 fas fa-bell"></i>Hà Nội</a></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="ml-auto p-2 bg-dark" id="dn" style="border-radius:15px;outline:none;"><a class="ml-auto py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger text-light" id="login-home" href="/login">Đăng nhập</a></div>
+        <div class="p-2 bg-dark ml-2" id="dk" style="border-radius:15px;outline:none;"><a class="ml-auto py-2 px-0 px-lg-2 font-weight-bold rounded js-scroll-trigger text-light" id="signup-home" href="/signup">Đăng ký</a></div>
+      </div>
+    </nav>
+  </nav>
+  <div class="scrollTop position-fixed" onclick="scrollToTop();"></div><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/HeroBannerDestination/Vietnam/Herro%20banner/HANOI/Hero%20banner/1300x450/Hanoi_herobanner_chua_tran_quoc_1300x450.jpg" style="padding-bottom:20px; width:100%">
+  <div class="abc container"><a class="linkurl" href="/">Trang chủ &nbsp</a><i class="fas fa-chevron-right"></i><a class="linkurl" href="#2">&nbsp Khám phá &nbsp</a><i class="fas fa-chevron-right"></i><span>&nbsp Đà Nẵng</span>
+    <div class="flex-container">
+      <div class="flex-item1"><span class="fas fa-mountain" style="font-size:20px"></span><a class="linkurl" href="#c1">&nbsp Cảnh đẹp</a></div>
+      <div class="flex-item1"><span class="fas fa-hamburger" style="font-size:20px"></span><a class="linkurl" href="#c2">&nbsp Ẩm thực</a></div>
+      <div class="flex-item1"><span class="fas fa-running" style="font-size:20px"></span><a class="linkurl" href="#c3">&nbsp Hoạt động</a></div>
+      <div class="flex-item1"><span class="fas fa-car" style="font-size:20px"></span><a class="linkurl" href="#c4">&nbsp Di chuyển</a></div>
+      <div class="flex-item1"><span class="far fa-file-alt" style="font-size:20px"></span><a class="linkurl" href="#c5">&nbsp Thông tin hữu ích</a></div>
+    </div>
+    <h2 class="my-3" style="text-align:center">Đà Nẵng – Thành phố biển đáng sống nhất</h2>
+    <p>Là thành phố lớn nhất miền Trung, Đà Nẵng khoác lên mình sự nhộn nhịp và huyên náo của một trung tâm kinh tế - văn hóa lớn nhất khu vực. Được bao bọc bởi biển cả xanh ngát và núi non hùng vĩ, đây là thành phố đáng sống với nhiều thắng cảnh làm say lòng người cùng những giá trị văn hóa độc đáo. Con người Đà Nẵng bình dị, mến khách đã trở thành biểu tượng của mảnh đất này.
+      <p id="c1" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;"> Cảnh đẹp</p>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/canh%20dep/1920x1080/Danang_canhdep_chua_cau_hoi_an_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Chùa Cầu Hội An</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/canh%20dep/1920x1080/Danang_canhdep_ghenh_da_ban_than_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Ghềnh đá Bàn Than</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/canh%20dep/1920x1080/Danang_canhdep_song_han_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Sông Hàn</figcaption>
+      </div>
+      <p><strong>Sông Hàn</strong>: Giữa trung tâm thành phố Đà Nẵng, nổi bật dưới ánh đèn sáng rực là sông Hàn về đêm lộng lẫy, lung linh, huyền ảo như một bức mạnh muôn màu. Hai cây cầu bắc qua sông Hàn là cầu Sông Hàn và cầu Rồng có lẽ đẹp nhất khi đêm xuống.
+        <br>
+        <strong>Bãi biển Mỹ Khê</strong>:  Gần trung tâm thành phố, bãi biển Mỹ Khê với làn nước trong xanh, bãi cát trắng mịn và hàng dừa cao vút đung đưa theo gió là nơi cực kỳ lý tưởng. Vào buổi tối, còn gì tuyệt vời hơn khi cùng nhau ngồi bên bờ biển, lắng nghe sóng vỗ rì rào và cảm nhận hơi thở mặn mòi của biển cả.
+        <br>
+        <strong>Ngũ Hành Sơn</strong>:  Ngũ Hành Sơn Đà Nẵng là nơi vừa mang vẻ đẹp thiên nhiên hùng vĩ, vừa mang giá trị tâm linh với những tảng đá rêu phong, hang động kỳ vĩ và các công trình kiến trúc cổ kính.
+        <br>
+        <strong>Bán đảo Sơn Trà</strong>: Bạn cũng có thể tới bán đảo Sơn Trà - nơi có đường bờ biển dài với nhiều bãi biển đẹp như Tiên Sa, Đá Đen, Bụt hay các công trình như chùa Linh Ứng, đỉnh Bàn Cờ.
+        <br>
+        <strong>Bà Nà Hills</strong>:  Bà Nà Hills Đà Nẵng là điểm đến không thể bỏ qua trên hành trình của bạn. Di chuyển lên bằng cáp treo, chốn “bồng lai tiên cảnh” trên đỉnh núi Chúa với kiến trúc mang phong cách châu  u sẽ khiến bạn phải kinh ngạc. Khu biệt thự cổ kiểu Pháp, khu văn hoá Phật giáo, cầu Bàn Tay, hầm rượu, vườn hoa Le Jardin... đã làm say lòng biết bao du khách ghé thăm.
+      </p>
+      <p id="c2" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Ẩm thực</p>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/Am%20thuc/1920x1080/Danang_amthuc_com_ga_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Cơm gà Hội An</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/Am%20thuc/1920x1080/Danang_amthuc_mi_quang_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Mì Quảng</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/Am%20thuc/1920x1080/Danang_amthuc_mi_quang_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Nem lụi nướng               </figcaption>
+      </div>
+      <p>
+        Đến với Đà Nẵng, bạn sẽ lạc vào thiên đường ẩm thực với nhiều món ăn như bánh xèo, bún chả cá, bún mắm nêm, bánh canh ghẹ, bánh tráng thịt heo, nem lụi, cơm gà... Đặc biệt, đặc sản Đà Nẵng mà du khách tới đây nhất định không được bỏ qua đó là món mỳ Quảng nổi tiếng. Những sợi mỳ to, dày trộn với nước dùng đặc biệt sánh mịn được ninh từ xương heo, ăn kèm rau sống, giá đỗ và bắp chuối lát mỏng, tạo nên thứ hương vị đậm đà khó quên.
+        <br>
+        Vào những ngày nắng vàng, một ly chè sầu sẽ khiến bạn cảm thấy thật khoan khoái nhờ vị béo ngậy của sầu riêng hòa quyện cùng nước cốt dừa thơm ngọt, sữa tươi và các loại thạch thanh mát. Chè sầu nơi đâu ở Việt Nam cũng có nhưng hương vị thơm ngon đặc trưng của chè sầu Đà Nẵng thì không phải nơi nào cũng có được.
+      </p>
+      <p id="c3" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Các hoạt động</p>
+      <p>
+        
+        Nếu muốn cảm nhận rõ nét đẹp của Đà Nẵng, chắc chắn bạn sẽ cần một chỗ trên du thuyền dọc sông Hàn, vừa có thể ngắm nhìn dòng sông Hàn huyền ảo, lãng mạn, vừa chiêm ngưỡng cuộc sống con người hai bên bờ sông Hàn nhộn nhịp.
+        <br>Rời sông Hàn, hãy mua một tấm vé tới khu du lịch Hòa Phú Thành và trải nghiệm hành trình mạo hiểm 3km trượt thác nước bằng xuồng cao su, vượt qua các ghềnh thác hay thử thách đu dây Zipline.
+        <br>Đặc biệt, nếu đến Đà Nẵng vào những dịp lễ hội, bạn sẽ còn được hòa mình vào không khí nhộn nhịp và khám phá các nét đẹp văn hóa bản địa. Lễ hội Pháo hoa quốc tế, lễ hội Ẩm thực và bia (Bà Nà Hills), lễ hội Quán Thế Âm Đà Nẵng hay lễ hội Cầu ngư là những hoạt động đặc sắc mà bạn không thể bỏ qua.
+      </p>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/Hoat%20dong/1920x1080/Danang_hoatdong_keo_luoi_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Kéo lưới bắt cá</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/Hoat%20dong/1920x1080/Danang_hoatdong_lan_san_ho_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Lặn biển</figcaption>
+      </div>
+      <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position:relative"><img class="imgshow" src="https://www.vietnamairlines.com/~/media/Images/Discovery/Vietnam/DANANG/Hoat%20dong/1920x1080/Danang_hoatdong_tha_den_hoa_dang_1920x1080.jpg" style="width:70%;border-radius:10px">
+        <figcaption style="text-align: center; font-weight: bold; margin-top:10px; margin-bottom: 20px">Thả đèn hoa đăng</figcaption>
+      </div>
+      <p id="c4" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Di chuyển</p>
+      <p class="ab container">Hạ cánh xuống sân bay Đà Nẵng, cách trung tâm thành phố khoảng 3km, bạn có thể bắt xe buýt ở cổng sân bay, mất khoảng 10 - 15 phút. Giá vé khoảng 10.000 đồng/lượt, tần suất 15 - 20 phút/chuyến và hoạt động từ 5 giờ 30 phút đến 17 giờ 30 phút hàng ngày. Bạn cũng có thể đón taxi hoặc xe ôm để tiện cho việc ghé thăm quán hàng trên đường về chỗ nghỉ ngơi. Giá đi taxi vào khoảng 60 - 80.000 đồng/lượt và xe ôm là 20.000 - 50.000 đồng/lượt.</p>
+      <div class="container1" style="display:flex; justify-content:center">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/-HY6YnkSONo" style="width: 800px; height: 450px; display:flex; justify-content:center; align-self:center"></iframe>
+      </div>
+      <p id="c5" style="background-color:#95CAF6; text-align:center; font-size: 24px; font-weight: bold; font-family: Arial, sans-serif; margin-top: 20px;">Thông tin hữu ích</p>
+      <div class="abc container">
+        <p style="font-size:22px"> Nơi ở</p>
+        <p style="margin-left:10px;margin-right:10px;text-align:justify">
+          Hệ thống khách sạn, nhà nghỉ tại nhà Đà Nẵng rất phong phú từ bình dân tới cao cấp, do đó bạn hoàn toàn yên tâm về vấn đề an toàn cũng như chất lượng.
+          Nếu bạn muốn du lịch biển mà vẫn có thể tham quan thành phố thì nên chọn các khách sạn ven sông Hàn, giá cả các khách sạn tại đây tương đối phải chăng dao động khoảng 200k/ngày, nếu muốn ở resort sang trọng bạn có thể lựa chọn các khách sạn 5 sao. Tại đây, bạn có thể đi bộ để dạo ra biển rất thuận lợi, nhất là ngắm biển về đêm.
+          Nếu bạn muốn du lịch trung tâm thành phố nên chọn các khách sạn gần sân bay Đà Nẵng (từ giá bình dân tới khách sạn cao cấp đều rất phong phú) để có thể thuận lợi tới các khu vui chơi, giải trí. Để đặt khách sạn/nhà nghỉ ở Đà Nẵng bạn nên sử dụng Agoda, khá rẻ, phong phú và chủ động
+        </p>
+        <p style="font-size:22px"> Cẩm nang bỏ túi</p>
+        <ul>
+          <li>Vào các mùa cao điểm du lịch, nhất là thời điểm diễn ra lễ hội bắn pháo hoa, lượng khách đổ về Đà Nẵng rất đông, khiến khách sạn thường rơi vào tình trạng quá tải. Nếu muốn đến vào dịp này, bạn hãy nhớ lên kế hoạch, đặt trước phòng sớm để tìm được một nơi nghỉ ngơi ưng ý nhất nhé.</li>
+          <li>Bạn có thể liệt kê những điểm cần đến và lên lịch trình chuyến đi chi tiết để tiết kiệm chi phí và thời gian nhé.</li>
+          <li>
+             Trước khi sử dụng các dịch vụ du lịch, mua sắm, ăn uống, bạn cũng nên hỏi trước giá cả, trả giá khi cần để tránh bị nói thách.</li>
+        </ul>
+      </div>
+    </p>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+    showSlides((slideIndex += n));
+    }
+    
+    function currentSlide(n) {
+    showSlides((slideIndex = n));
+    }
+    
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+    
+    //- function openModal2() {
+    //- document.getElementById("myModal2").style.display = "block";
+    //- }
+    
+    //- function closeModal2() {
+    //- document.getElementById("myModal2").style.display = "none";
+    //- }
+    
+    //- var slideIndex2 = 1;
+    //- showSlides2(slideIndex2);
+    
+    //- function plusSlides2(n) {
+    //- showSlides2((slideIndex2 += n));
+    //- }
+    
+    //- function currentSlide2(n) {
+    //- showSlides2((slideIndex2 = n));
+    //- }
+    
+    //- function showSlides2(n) {
+    //- var i;
+    //- var slides = document.getElementsByClassName("mySlides2");
+    //- var dots = document.getElementsByClassName("demo");
+    //- var captionText = document.getElementById("caption2");
+    //- if (n > slides.length) {
+    //-     slideIndex2 = 1;
+    //- }
+    //- if (n < 1) {
+    //-     slideIndex2 = slides.length;
+    //- }
+    //- for (i = 0; i < slides.length; i++) {
+    //-     slides[i].style.display = "none";
+    //- }
+    //- for (i = 0; i < dots.length; i++) {
+    //-     dots[i].className = dots[i].className.replace(" active", "");
+    //- }
+    //- slides[slideIndex2 - 1].style.display = "block";
+    //- dots[slideIndex2 - 1].className += " active";
+    //- captionText.innerHTML = dots[slideIndex2 - 1].alt;
+    //- }
+  </script>
+  <footer class="footer-bottom text-center footer-class">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-sm-4 mb-4 mb-sm-0">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">vị trí</h4>
+          <p class="lead mb-0" style="color:white; text-align: center">
+            
+            Trường Đại học Công nghệ Thông tin TPHCM
+            <br>
+            Khu phố 6, Phường Linh Trung, TP. Thủ Đức
+            
+          </p>
+        </div>
+        <div class="col-sm-4 mb-4 mb-sm-0">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">Sky Airlines</h4><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-dribbble"></i></a>
+        </div>
+        <div class="col-sm-4">
+          <h4 class="text-uppercase mb-4" style="color:white; text-align: center">Về chúng tôi</h4>
+          <p class="lead mb-0" style="color:white; text-align: center">Quản lý bán vé chuyến bay<br>SE104.N23</p><b class="text-uppercase" style="color:white; text-align: center">team 26</b>
+        </div>
+      </div>
+      <div class="copyright py-4 text-center text-white container-xl"><small style="color:white;">Copyright © Team 26</small></div>
+    </div>
+  </footer>
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+    }
+    });
+    
+    function hoverLi(){
+    document.getElementById("hover-li").style.color= "#f4942d";
+    };
+    function leaveLi(){
+    document.getElementById("hover-li").style.color= "#1f3c7a";
+    };
+    
+    function hoverLi2(){
+    document.getElementById("hover-li2").style.color= "#f4942d";
+    };
+    function leaveLi2(){
+    document.getElementById("hover-li2").style.color= "#1f3c7a";
+    };
+    
+    function hoverLi3(){
+    document.getElementById("hover-li3").style.color= "#f4942d";
+    };
+    function leaveLi3(){
+    document.getElementById("hover-li3").style.color= "#1f3c7a";
+    };
+    
+    window.addEventListener('scroll',()=>{
+        var scroll = document.querySelector('.scrollTop');
+        scroll.classList.toggle('actived',window.scrollY > 400)
+    });
+    
+    function scrollToTop(){
+        //- window.scrollTo({
+        //-     top:0,
+        //-     behavior: 'smooth'
+        //- });
+        $("html, body").animate({scrollTop: 0 },"show");
+    };
+  </script>
+</body>

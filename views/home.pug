@@ -15,25 +15,27 @@ block content
                 img(src='/images/poster_main-5.jpg', style='width: 100%;height:40vw;')
         .swiper-pagination
 
-    .booking-area.p-4.my-3
+    .booking-area.p-5.my-4
         form.form-group.container-lg.shadow(action="/flight-searching", method="get")
             .d-flex.mx-2.my-1
-                    a.mr-2.flex-fill(href="/booking" type="button", class="btn btn-md-2", style="width:20%;background:" )
+                    a.mr-2.flex-fill(href="/booking" type="button", class="btn btn-md-2", style="width:20%;")
                         i.fas.fa-fw.fa-search-location
+                        |
                         |  Đặt vé 
-                    a.flex-fill(href="/viewTicket", type="button", class="btn btn-md-2", style="width:20%;") 
+                    a.mr-2.flex-fill(href="/viewTicket", type="button", class="btn btn-md-2", style="width:20%;") 
                         i.fas.fa-fw.fa-plane-departure
+                        |
                         |  Lịch sử mua đặt vé
-            
-            .row.p-2
+        
+            .row.p-2.d-flex.align-items-center.justify-content-center
                 .col-lg-5.mb-2
                     label.font-weight-bold(for='booking' id="start") Điểm đi:
                     select.select-form.form-control(id='booking' type="text" name="departureAirport" required)
                         option Chọn điểm đi
                         each place in Airports
                             option= place.city 
+                
                 .col-lg-1
-                    div.shadow.btn-exchange.my-1
                         
                 .col-lg-5.mb-2
                     label.font-weight-bold(for='sel1') Điểm đến:
@@ -43,20 +45,26 @@ block content
                             option= local.city
                 .col-lg-0 
                     input(type="hidden" name="_csrf" value=csrf)
-            .row.p-2
+
+            .row.p-2.d-flex.align-items-center.justify-content-center
                 .col-lg-5.mb-2
                     label.font-weight-bold(for='sellist1' id="start" ) Thời gian:
-                    input.form-control(type="date", value="" ,id="example-date-input", placehodler="dd//mm/yyyy", name="date" required) 
+                    input.form-control(type="date", value="" ,id="example-date-input", placehodler="dd//mm/yyyy", name="date" required)
+
+                .col-lg-1
+                    
                 .col-lg-5.mb-2
                     label.font-weight-bold(for='sel1') Số lượng:
                     input.form-control(type="number" min="1" value="1" name="num" readonly="readonly") 
-                #buttonFind.col-lg-2(style="transform:translateY(-15px);")
+
+            .row.p-2.d-flex.flex-column.align-items-center.justify-content-center
+                #buttonFind.col-lg-2
                     button.mt-2.p-2.font-weight-bold(type="submit",name="sub", class="btn btn-outline-success" style="border-radius:10px;" value="1") Tìm chuyến bay
             
     .content-container.container-lg
         .row.p-2
             .quick-link.col-md.mb-3
-                h4.mb-3(style="color:#f4942d") Liên kết nhanh
+                h4.mb-3(style="color:#0000FF") Liên kết nhanh
                 .row
                     .col-md-6.col-sm-6.mb-3
                         a(href="/booking")
@@ -89,11 +97,11 @@ block content
                         
                         
             .offer-wrapper.col-sm.mb-3
-                h4(style="color:#f4942d") Ưu đãi
+                h4(style="color:#0000FF") Ưu đãi
                 a
                     img(src="/images/Uudai_dichvu_1.png" style="width:100%;border-radius:5px;")
             .destination.col-sm
-                h4(style="color:#f4942d") Điểm đến nổi bật 
+                h4(style="color:#0000FF") Điểm đến nổi bật 
                 a(href="#booking")
                     img(src="/images/Hue_main_2.webp"  style="width:100%;border-radius:5px;")
                     
@@ -104,14 +112,14 @@ block content
             .container
                 .row
                     .col-sm-10
-                        .txt1(style="font-size: 48px;font-weight: 800;color: #f4942d;") Đường bay giá siêu rẻ
-                        .txt2(style="color:white;")
+                        .txt1(style="font-size: 48px;font-weight: 800;color: #000000;") Đường bay giá siêu rẻ
+                        .txt2(style="font-size: 24px; color:black;")
                             | Nhằm nâng cao trải nghiệm và tạo thuận lợi cho hành khách trong việc di chuyển đến 
                             | sân bay một cách nhanh chóng và an toàn, Sky Airlines xin giới thiệu và dành tặng dịch vụ di chuyển 
                             | không âu lo cho tất cả khách hàng đặt vé và thực hiện chuyến bay của chúng tôi. 
-                        .txt3.font-weight-bold(style="padding-top: 10px;color: #f4942d;font-size: 30px;")
+                        .txt3.font-weight-bold(style="font-weight: bold; padding-top: 10px;color: #000000;font-size: 30px;")
                             | Ưu đãi chỉ với 
-                            span(style="color:white;font-size:40px") 36.000đ
+                            span(style="color: #0000FF;font-size:40px") 136.000đ
                     .col-sm-2.mt-5
                         a.btn-success.btn.mt-3.p-3(href='/blogs/phu-quoc' style="position:relative;") Khám phá ngay
     .content-tour#features.p-4
