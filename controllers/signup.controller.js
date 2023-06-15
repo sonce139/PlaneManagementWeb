@@ -32,7 +32,8 @@ module.exports.postCreate = async (req, res) => {
     const Userdata = {
         userName: req.body.username,
         Gmail: req.body.gmail,
-        Password: await encrypt(req.body.password)
+        Password: req.body.password
+        //Password : await encrypt(req.body.password),
     };
 
     // Register.
@@ -80,7 +81,8 @@ module.exports.postCreateAdmin = async (req, res) => {
     var adminData = {
         Name : req.body.name, 
         userName : req.body.username,
-        Password : await encrypt(req.body.password),
+        Password : req.body.password,
+        //Password : await encrypt(req.body.password),
         Gmail : req.body.gmail,
         SDT : req.body.SDT
     }
